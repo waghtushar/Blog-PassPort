@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Blog.Com</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+  <header>
+    <h1>My Blog.Com</h1>
+    <nav>
+      <ul>
+        <li><a href="/formPage">Add Blog</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="/logOut">LogOut</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="main-flex">
+      <% show.map((val)=> { %>
+        <div class="blog-post">
+          <div class="img" >
+            <img src="<%= val.image %>" alt="Blog Post Image" />
+          </div>
+          <div class="content">
+            <h1>
+              <%= val.title %>
+            </h1>
+            <h2>
+              <%= val.author %>
+            </h2>
+            <p class="post-date">
+              <%= val.date %>
+            </p>
+            <p>
+              <%= val.dsc %>
+            </p>
+            <div class="d-flex">
+              <a href="/delete?id=<%= val._id %>"><button>Delete</button></a>
+              <a href="/editPage?id=<%= val._id %>"><button>Edit</button></a>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+    </div>
+  </main>
+</body>
+
+</html>

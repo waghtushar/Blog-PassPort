@@ -1,0 +1,79 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
+    background-image: url("https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?cs=srgb&dl=pexels-sliceisop-1591447.jpg&fm=jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-width: 400px;
+    width: 100%;
+}
+
+.login h1 {
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login label {
+    display: block;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn button,
+.btn a {
+    background: #ff7e5f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.btn button:hover,
+.btn a:hover {
+    background: #feb47b;
+}
+
+.btn a {
+    display: inline-block;
+}
